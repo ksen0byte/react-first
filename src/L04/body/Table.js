@@ -4,7 +4,7 @@ import Card from "./Card";
 class Table extends Component {
     render() {
         const {list, pattern, onDismiss, category, noContentPlaceholder} = this.props;
-        if (list.length === 0) return Table.getNoContentPlaceholder(noContentPlaceholder);
+        if (list == null || list.length === 0) return Table.getNoContentPlaceholder(noContentPlaceholder);
 
         const matchSearchString = searchString => item => item && item.title && item.title.toLowerCase().includes(searchString.toLowerCase());
         let cards = list.filter(matchSearchString(pattern)).map(item =>

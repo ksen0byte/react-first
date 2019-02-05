@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Button from "../component/Button";
 import ThemeToggleButton from "../component/ThemeToggleButton";
-import './index.css'
+import './index.scss'
 
 
 class Footer extends Component {

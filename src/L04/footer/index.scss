@@ -1,0 +1,82 @@
+$backgroundHoverColor: rgba(155, 155, 155, 0.2);
+$defaultPadding: 1em;
+$toggleButtonWidth: 60px;
+$toggleTransition: .4s;
+
+.footer {
+  flex-shrink: 0;
+}
+
+.footer:hover {
+  background-color: $backgroundHoverColor;
+}
+
+.interactionsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: $defaultPadding;
+  padding: $defaultPadding;
+}
+
+.moreButtonContainer {
+  grid-column-start: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.themeToggleButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.moreButton {
+  background-color: transparent;
+  border: none;
+  color: chocolate;
+  text-decoration: none;
+  width: 10%;
+  height: 100%;
+  border-radius: 4px;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: $toggleButtonWidth;
+  height: $toggleButtonWidth / 1.75;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: $toggleTransition;
+  transition: $toggleTransition;
+}
+
+.beforeSlider {
+  position: absolute;
+  cursor: pointer;
+  height: $toggleButtonWidth / 2.3;
+  width: $toggleButtonWidth / 2.3;
+  left: $toggleButtonWidth / 15;
+  bottom: $toggleButtonWidth / 15;
+  -webkit-transition: $toggleTransition;
+  transition: $toggleTransition;
+  z-index: 1;
+}
+
+input:checked + .beforeSlider {
+  transform: translateX($toggleButtonWidth / 2.3);
+}

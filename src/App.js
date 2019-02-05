@@ -6,13 +6,13 @@ import Category from "./L04/enum/Category";
 import Footer from "./L04/footer/Footer";
 import {ThemeContext, themes} from "./L04/context/ThemeContext";
 import {
-    DEFAULT_QUERY,
     DEFAULT_HPP,
+    DEFAULT_QUERY,
+    PARAM_HPP,
+    PARAM_PAGE,
+    PARAM_SEARCH,
     PATH_BASE,
     PATH_SEARCH,
-    PARAM_SEARCH,
-    PARAM_PAGE,
-    PARAM_HPP,
 } from './L04/constants/constants';
 import AndrewTimer from "./L04/oops/who/did/that/AndrewTimer";
 
